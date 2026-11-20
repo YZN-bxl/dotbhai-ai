@@ -1,0 +1,11 @@
+services:
+  - type: worker
+    name: dotbhai-ai
+    runtime: python
+    region: frankfurt
+    plan: starter
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    envVars:
+      - key: DISCORD_TOKEN
+        sync: false
